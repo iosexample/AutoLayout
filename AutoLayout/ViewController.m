@@ -10,13 +10,19 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    _scrollView.translatesAutoresizingMaskIntoConstraints = NO;
+    _imageView.translatesAutoresizingMaskIntoConstraints = NO;
+    
 }
 
 - (void)didReceiveMemoryWarning {
